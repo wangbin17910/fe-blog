@@ -23,7 +23,7 @@
             "user": "root",
             "host": "115.29.49.75",
             "ref": "origin/master",
-            "repo": "git@192.168.100.40:lvjinlong/ghost-blog.git",
+            "repo": "git@github.com:luojilab/fe-blog.git",
             "path": "/frontend/ghost-blog",
             "post-deploy": "npm install --production; pm2 startOrRestart ecosystem.json  --env production"
         }
