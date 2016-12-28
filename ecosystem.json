@@ -24,7 +24,7 @@
             "host": "115.29.49.75",
             "ref": "origin/master",
             "repo": "git@github.com:luojilab/fe-blog.git",
-            "path": "/root/frontend/ghost-blog",
+            "path": "/root/frontend/ghostblog",
             "post-deploy": "npm install --production; pm2 startOrRestart ecosystem.json  --env production"
         }
     }
