@@ -1,0 +1,31 @@
+{
+    "apps": [{
+        "name": "ghost-blog",
+        "script": "./index.js",
+        "watch": true,
+        "max_memory_restart": "1024M",
+        "instances": "1",
+        "exec_mode": "cluster",
+        "log_date_format": "YYYY-MM-DD HH:mm Z",
+        "error_file": "/data/logs/node/ghost-blog-err.log",
+        "out_file": "/data/logs/node/ghost-blog-out.log",
+        "combine_logs": true,
+        "merge_logs": true,
+        "env": {
+            "NODE_ENV": "development"
+        },
+        "env_production": {
+            "NODE_ENV": "production"
+        }
+    }],
+    "deploy": {
+        "production": {
+            "user": "root",
+            "host": "115.29.49.75",
+            "ref": "origin/master",
+            "repo": "git@192.168.100.40:lvjinlong/ghost-blog.git",
+            "path": "/frontend/ghost-blog",
+            "post-deploy": "npm install --production; pm2 startOrRestart ecosystem.json  --env production"
+        }
+    }
+}
