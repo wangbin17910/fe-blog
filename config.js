@@ -2,6 +2,8 @@ var path = require('path'),
     fs = require("fs"),
     config;
 
+var mysqlInfo = JSON.parse(fs.readFileSync(path.join(__dirname, '../sys-config/luojilab_my_sql_pwd.json')).toString());
+
 config = {
     production: {
         url: 'http://f2e.dev.didatrip.com',
@@ -10,9 +12,9 @@ config = {
             client: 'mysql',
             connection: {
                 host: 'localhost',
-                user: 'root',
-                password: 'lvjinlong',
-                database: 'luojilab_blog',
+                user: mysqlInfo.name,
+                password: mysqlInfo.pwd,
+                database: mysqlInfo.database,
                 charset: 'utf8'
             }
         },
@@ -49,9 +51,9 @@ config = {
             client: 'mysql',
             connection: {
                 host: 'localhost',
-                user: 'root',
-                password: 'root',
-                database: 'ghost_development',
+                user: mysqlInfo.name,
+                password: mysqlInfo.pwd,
+                database: mysqlInfo.database,
                 charset: 'utf8'
             }
         },
