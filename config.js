@@ -1,4 +1,6 @@
 var path = require('path'),
+    fs = require("fs"),
+    mysqlInfo = pa,
     config;
 
 config = {
@@ -6,11 +8,14 @@ config = {
         url: 'http://f2e.dev.didatrip.com',
         mail: {},
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
-            debug: false
+                host: 'localhost',
+                user: 'root',
+                password: 'lvjinlong',
+                database: 'luojilab_blog',
+                charset: 'utf8'
+            }
         },
 
         server: {
