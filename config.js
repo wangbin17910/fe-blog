@@ -1,6 +1,5 @@
 var path = require('path'),
     fs = require("fs"),
-    mysqlInfo = pa,
     config;
 
 config = {
