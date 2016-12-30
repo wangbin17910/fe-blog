@@ -6,7 +6,7 @@ var mysqlInfo = JSON.parse(fs.readFileSync(path.join(__dirname, '../sys-config/l
 
 config = {
     production: {
-        url: 'http://f2e.dev.didatrip.com',
+        url: 'http://f2e.luojilab.org/',
         mail: {},
         database: {
             client: 'mysql',
@@ -46,17 +46,23 @@ config = {
         //      }
         //  },
         // ```
-
         database: {
-            client: 'mysql',
+            client: 'sqlite3',
             connection: {
-                host: 'localhost',
-                user: mysqlInfo.name,
-                password: mysqlInfo.pwd,
-                database: mysqlInfo.database,
-                charset: 'utf8'
-            }
+                filename: path.join(__dirname, '/content/data/ghost-dev.db')
+            },
+            debug: false
         },
+        // database: {
+        //     client: 'mysql',
+        //     connection: {
+        //         host: 'localhost',
+        //         user: mysqlInfo.name,
+        //         password: mysqlInfo.pwd,
+        //         database: mysqlInfo.database,
+        //         charset: 'utf8'
+        //     }
+        // },
         server: {
             host: '0.0.0.0',
             port: '9922'
