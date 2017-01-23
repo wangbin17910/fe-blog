@@ -7,7 +7,16 @@ var mysqlInfo = JSON.parse(fs.readFileSync(path.join(__dirname, '../sys-config/l
 config = {
     production: {
         url: 'http://f2e.luojilab.org/',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: 'postmaster@sandbox5b6b499ab64c43eeb18957104671bceb.mailgun.org', // mailgun username
+                    pass: '36617ba6b75d105720613264ca7b4b55' // mailgun password
+                }
+            }
+        },
         database: {
             client: 'mysql',
             connection: {
@@ -40,8 +49,8 @@ config = {
         //      options: {
         //          service: 'Mailgun',
         //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
+        //              user: 'postmaster@sandbox5b6b499ab64c43eeb18957104671bceb.mailgun.org', // mailgun username
+        //              pass: '36617ba6b75d105720613264ca7b4b55'  // mailgun password
         //          }
         //      }
         //  },
