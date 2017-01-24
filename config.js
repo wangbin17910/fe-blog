@@ -12,8 +12,8 @@ config = {
             options: {
                 service: 'Mailgun',
                 auth: {
-                    user: 'postmaster@sandbox5b6b499ab64c43eeb18957104671bceb.mailgun.org', // mailgun username
-                    pass: '36617ba6b75d105720613264ca7b4b55' // mailgun password
+                    user: 'postmaster@f2e.luojilab.org', // mailgun username
+                    pass: '43339bcaf8659ce5d290fcf104f2af85' // mailgun password
                 }
             }
         },
