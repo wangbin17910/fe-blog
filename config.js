@@ -12,7 +12,7 @@ config = {
             options: {
                 service: 'Mailgun',
                 auth: {
-                    user: 'postmaster@f2e.luojilab.org', // mailgun username
+                    user: 'postmaster@sandbox5b6b499ab64c43eeb18957104671bceb.mailgun.org', // mailgun username
                     pass: mysqlInfo.mailpwd // mailgun password
                 }
             }
